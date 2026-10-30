@@ -48,13 +48,21 @@ cd site && python3 -m http.server 8765
 
 ### A. Git → Cloudflare Pages (preferred when connected)
 
-Push to `main`. Cloudflare builds from this repo:
+Push to `main`. Intended Pages settings for project **`starlit-tree`**:
 
-- Build command: *(empty)*
+- Build command: *(empty / none)*
 - Build output directory: `site`
+- Root directory: `/` (repo root)
 - Production branch: `main`
+- Custom domain: `www.qkdawn.com`
 
-Custom domain: `www.qkdawn.com` on project `starlit-tree`.
+**Status (2026-10-31):** API connect returned Cloudflare error `8000011` (Pages Git installation issue). Reconnect GitHub in the Cloudflare dashboard:
+
+1. https://dash.cloudflare.com → Workers & Pages → **starlit-tree** → Settings → Builds & deployments
+2. Connect to Git → GitHub → authorize `qkdawn/qkdawn.com`
+3. Set output directory to `site`, save
+
+Until that is fixed, production stays on the existing direct-upload worker deploy (path B). Do not delete the custom domain while switching.
 
 ### B. Manual worker upload (box / MCP)
 
