@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="钱坤的博客。">
+  <title>博客 · 钱坤</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳转到正文</a>
+  <div class="site-shell">
+    <header class="topbar"><a class="brand" href="/" aria-label="钱坤，返回首页"><span class="brand-cn">钱坤</span><span class="brand-en">Kun Qian</span></a><nav aria-label="主导航"><a href="/#about">关于</a><a href="/#projects">项目</a><a href="/blog" aria-current="page">博客</a></nav></header>
+    <main id="main" class="subpage-main">
+      <section class="page-intro" aria-labelledby="page-title"><span class="eyebrow">钱坤 <span aria-hidden="true">/</span> Kun Qian</span><h1 id="page-title">博客<span class="title-period">。</span></h1></section>
+      <section class="blog-listing" aria-label="文章列表"><div class="section-ribbon"><h2>全部文章</h2><span id="post-count">00</span></div><ul class="posts" id="posts"></ul></section>
+    </main>
+    <footer class="footer"><span>钱坤 <span class="footer-slash">/</span> Kun Qian</span><a href="https://github.com/qkdawn" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><span>© 2026</span></footer>
+  </div>
+  <script src="/blog/posts.js"></script>
+  <script>renderPosts(document.getElementById('posts')); document.getElementById('post-count').textContent = String(POSTS.length).padStart(2, '0');</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+dist/
+review/
+shot*.png
+*.log
+CODEX_*.md
+__pycache__/
+*.pyc
+.site.v1-backup/
+site.v1-backup/
+fontvenv/
+.fonts-src-cache/
+fonts-src/*.ttf
+fonts-src/*.otf
+fonts-src/*.ttc
+.DS_Store
+.pwtool/
+node_modules/
